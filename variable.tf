@@ -1,11 +1,12 @@
 terraform {
   required_providers {
     aws = {
-    source = "hashicrop/aws"
-    version = "5.40.0"
+      source  = "hashicorp/aws"
+      version = "5.40.0"
     }
   }
 }
+
 provider "aws"  {
     region = "var.region"
     #shared_config_files = ["/home/ubuntu/.aws/config"]
