@@ -6,12 +6,12 @@ terraform {
     }
   }
 }
-#provider "aws" {
+provider "aws" {
     region = "var.region"
    # shared_config_files = ["/home/ubuntu/.aws/config"]
    # shared_credentials_files = ["/home/ubuntu/.aws/credentials"]
    # profile = "krishna"
-  #}
+  }
   resource "aws_instance" "server" {
     ami = var.ami
     instance_type = var.instance_type
@@ -57,9 +57,7 @@ terraform {
             ENV = "staging"
             Project ="abc"
         }
-        output "created_server" {
+        output "created_servre" {
             value = "yes"
         }
-
-        
-      }
+        }
