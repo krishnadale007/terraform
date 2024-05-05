@@ -7,11 +7,11 @@ terraform {
   }
 }
 provider "aws" {
-    region = "ap-south-1"
-    shared_config_files = ["/home/ubuntu/.aws/config"]
-    shared_credentials_files = ["/home/ubuntu/.aws/credentials"]
-    profile = "krishna"
-  }
+    region = "var.region"
+   # shared_config_files = ["/home/ubuntu/.aws/config"]
+   # shared_credentials_files = ["/home/ubuntu/.aws/credentials"]
+   # profile = "krishna"
+  #}
   resource "aws_instance" "server" {
     ami = var.ami
     instance_type = var.instance_type
@@ -24,7 +24,7 @@ provider "aws" {
     #default = "krishna"
    # description = "profile variable"
     
-  }
+  #}
   variable "region" {
     type = string
     default = "ap-south-1"
