@@ -57,7 +57,7 @@ provider "aws" {
             ENV = "staging"
             Project ="abc"
         }
-        output "created_servre" {
-            value = "yes"
-        }
+      }
+        output "created_server" {
+     value = "yes"
         }
