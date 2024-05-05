@@ -1,6 +1,6 @@
 terraform {
   required_providers {
-    aws{
+    aws = {
     source = "hashocop/aws"
     version = "5.40.0"
     }
