@@ -50,14 +50,14 @@ terraform {
 
       }
       variable "tags" {
-        type = map()
+        type = map
         description = "tags variable"
         default = {
             Name = "Ubuntu_servre-1"
             ENV = "staging"
             Project ="abc"
         }
-        output "created server" {
+        output "created_server" {
             value = "yes"
         }
 
