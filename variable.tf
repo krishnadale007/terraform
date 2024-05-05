@@ -1,16 +1,16 @@
 terraform {
   required_providers {
     aws = {
-    source = "hashocop/aws"
+    source = "hashicrop/aws"
     version = "5.40.0"
     }
   }
 }
 provider "aws"  {
     region = "var.region"
-    shared_config_files = ["/home/ubuntu/.aws/config"]
-   shared_credentials_files = ["/home/ubuntu/.aws/credentials"]
-   profile = "krishna"
+    #shared_config_files = ["/home/ubuntu/.aws/config"]
+   #shared_credentials_files = ["/home/ubuntu/.aws/credentials"]
+   #profile = "krishna"
   }
   resource "aws_instance" "server" {
     ami = var.ami
@@ -19,12 +19,12 @@ provider "aws"  {
     tags = var.tags
     
   }
-  variable "profile" {
-    type = string
-    default = "krishna"
-    description = "profile variable"
+ # variable "profile" {
+    #type = string
+    #default = "krishna"
+   # description = "profile variable"
     
-  }
+  #}
   variable "region" {
     type = string
     default = "ap-south-1"
