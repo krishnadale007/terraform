@@ -2,7 +2,7 @@
 provider "aws" {
     region = "global"
 }
-  resource "aws_s3_bucket" "my bucket" {
+  resource "aws_s3_bucket" "my bucket-1" {
   bucket = "my-tf-test-bucket"
 
   tags = {
