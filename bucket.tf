@@ -1,6 +1,6 @@
 
 provider "aws" {
-    region = "mumbai"
+    region = "ap-south-1"
 }
   resource "aws_s3_bucket" "example" {
   bucket = "my-tf-test-bucket"
@@ -9,4 +9,4 @@ provider "aws" {
     Name        = "My bucket"
     Environment = "Dev"
   }
-}
+}2
