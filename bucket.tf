@@ -9,4 +9,4 @@ provider "aws" {
     Name        = "My bucket"
     Environment = "Dev"
   }
-}2
+}
