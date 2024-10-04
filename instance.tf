@@ -7,7 +7,7 @@ resource "aws_instance" "ubuntu_servre" {
     key_name = "krish.pem"
     count = 1
     instance_type = "t2.micro"
-  
+  # instance of mumbai region
 }
 output "created_server" {
     value = "yes"
