@@ -1,7 +1,7 @@
 #keypair create
 resource "aws_key_pair" "riddhi" {
-    key_name = "riddhi.key"
-    public_key =file(riddhi.key.pub)
+    key_name = "riddhi_ec2"
+    public_key =file(riddhi_ec2.pub)
   
 }
 #vpc & security group
@@ -43,7 +43,7 @@ tags = {
 }
 
 #ec2 instance
-resource "aws_instance" "my_instance"{
+resource "aws_instance" "ri_instance"{
     key_name =aws_key_pair.my_key.key_name
     security_groups = [aws_security_group.security_group_1.name]
     instance_type = "t2.micro"
