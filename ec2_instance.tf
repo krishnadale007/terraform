@@ -1,5 +1,5 @@
 #keypair create
-resource "aws_key_pair" "riddhi" {
+resource aws_key_pair my_key {
     key_name = "riddhi_ec2"
     public_key =file(riddhi_ec2.pub)
   
