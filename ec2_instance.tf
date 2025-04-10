@@ -1,7 +1,7 @@
 #keypair create
 resource aws_key_pair my_key {
     key_name = "riddhi_ec2"
-    public_key =file(riddhi_ec2.pub)
+    public_key =file("riddhi_ec2.pub")
   
 }
 #vpc & security group
@@ -42,11 +42,11 @@ tags = {
     name ="automate_sg"
 }
 
-#ec2 
+#ecreate ec2 
 resource "aws_instance" "my_instance" {
-  ami           = "ami-0e35ddab05955cf57"
-  instance_type = "t2.micro"
-  key_name      = aws_key_pair.my_key.key_name
+  ami             = "ami-0e35ddab05955cf57"
+  instance_type   = "t2.micro"
+  key_name        = aws_key_pair.my_key.key_name
   security_groups = [aws_security_group.security_group_1.name]
 }
 
