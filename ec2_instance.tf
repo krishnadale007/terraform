@@ -35,7 +35,7 @@ resource "aws_security_group" "my_security_group" {
 egress{
     from_port = 0
     to_port = -1
-    protocol = 
+    protocol = "tcp"
     description = "all access open port"
 }
 tages = {
