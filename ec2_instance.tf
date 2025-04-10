@@ -42,11 +42,13 @@ tags = {
     name ="automate_sg"
 }
 
-#ec2 instance
-resource "aws_instance" "ri_instance"{
-    key_name =aws_key_pair.my_key.key_name
-    security_groups = [aws_security_group.security_group_1.name]
-    instance_type = "t2.micro"
-    ami_id ="ami-0e35ddab05955cf57"
+#ec2 
+resource "aws_instance" "my_instance" {
+  ami           = "ami-0e35ddab05955cf57"
+  instance_type = "t2.micro"
+  key_name      = aws_key_pair.my_key.key_name
+  security_groups = [aws_security_group.security_group_1.name]
 }
+
+
 }
