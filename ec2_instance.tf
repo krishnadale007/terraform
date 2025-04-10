@@ -38,14 +38,14 @@ egress{
     protocol = "tcp"
     description = "all access open port"
 }
-tages = {
+tags = {
     name ="automate_sg"
 }
 
 #ec2 instance
 resource "aws_instance" "my_instance"{
     key_name =aws_key_pair.my_key.key_name
-    security_group = [aws_security_group.my_security_group.name]
+    security_groups = [aws_security_group.my_security_group.name]
     instance_type = "t2.micro"
     ami_id ="ami-0e35ddab05955cf57"
 }
