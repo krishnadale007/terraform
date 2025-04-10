@@ -10,7 +10,7 @@ resource "aws_default_vpc" "default" {
     Name = "Default VPC"
   }
 }
-resource "aws_security_group" "my_security_group" {
+resource "aws_security_group" "security_group_1" {
     name = "automate_sg"
     description = "this will add a TF genrated security group"
     vpc_id = aws_default_vpc.default.id #interpolation
@@ -45,7 +45,7 @@ tags = {
 #ec2 instance
 resource "aws_instance" "my_instance"{
     key_name =aws_key_pair.my_key.key_name
-    security_groups = [aws_security_group.my_security_group.name]
+    security_groups = [aws_security_group.security_group_1.name]
     instance_type = "t2.micro"
     ami_id ="ami-0e35ddab05955cf57"
 }
