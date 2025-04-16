@@ -49,11 +49,11 @@ provider "aws" {
  }
 
 #ecreate ec2 
-  resource "aws_instance" "my_instance" {
+  resource "aws_instance" "ubuntu_servre" {
   ami             = "ami-0e35ddab05955cf57"
   instance_type   = "t2.micro"
-   key_name        = aws_key_pair.my_key.key_name
-   security_groups = [aws_security_group.security_group_1.name]
+  key_name        = aws_key_pair.my_key.key_name
+  security_groups = [aws_security_group.security_group_1.name]
  }
 
 
