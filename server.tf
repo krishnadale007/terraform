@@ -5,7 +5,7 @@ provider "aws" {
   profile = "krishna"  # profile
 }
 # Security Group
-resource "aws_security_group" "security_group_1" {
+resource "aws_security_group" "mysecurity_group" {
   name        = "automate_sg"
   description = "this will add a TF generated security group"
   vpc_id      = aws_default_vpc.default.id
@@ -48,5 +48,5 @@ resource "aws_instance" "my_instance" {
   ami             = "ami-0e35ddab05955cf57"
   instance_type   = "t2.micro"
   key_name        = aws_key_pair.my_key.key_name
-  security_groups = [aws_security_group.security_group_1.name]
+  security_groups = [aws_security_group.mysecurity_group.name]
 }
