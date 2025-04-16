@@ -2,7 +2,7 @@ provider "aws" {
   region = "ap-south-1"  # or your desired region
   shared_config_files = [ "/home/ubuntu/.aws/config" ]
   shared_credentials_files = [ "/home/ubuntu/.aws/credentials" ]
-  profile = "krishna"  # profile
+  profile = "krishna"  
 }
 # Security Group
 resource "aws_security_group" "mysecurity_group" {
